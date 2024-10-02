@@ -1,0 +1,16 @@
+--All Data query
+Select*
+from bank_products;
+
+--Query 2: Savings and Checking products
+select product_name
+from bank_products
+where product_type="checking"
+or product_type="Savings";
+
+--Query 3: Savings products with no monthly fee and 0.75 interest or better
+select product_name,interest_rate
+from bank_products
+where product_type="savings"
+and interest_rate>=0.75
+and monthly_fee=0;
