@@ -1,0 +1,12 @@
+--all information table
+select*
+from ecom_data;
+
+--select sum of minutes that all user spend shopping
+select Sum(session_duration)
+from ecom_data;
+
+--sum of minutes that all users spen shopping for each item
+select SUM(session_duration),item_name
+from ecom_data
+group by item_name;
