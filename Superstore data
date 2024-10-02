@@ -1,0 +1,18 @@
+--all data
+select*
+from superstore;
+
+--ordering items by price
+select item_name, price
+from superstore
+order by price desc;
+
+--order items by average rating
+select item_name,average_rating
+from superstore
+order by average_rating desc;
+
+--category stock quantaties
+select sum(stock_quantity),category
+from superstore
+group by category
