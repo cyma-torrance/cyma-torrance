@@ -1,0 +1,17 @@
+--All names of internet product types
+SELECT product_name
+FROM products
+WHERE product_type="Internet"; 
+
+--customer IDs for high-speed internet
+SELECT customer_ID
+FROM customer_subscriptions
+WHERE product_id=1; 
+
+--email addresses of all customers subscribed to internet
+SELECT email
+FROM customer_subscriptions
+WHERE product_id
+IN (SELECT product_id
+FROM products
+WHERE product_type="Internet");
