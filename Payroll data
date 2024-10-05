@@ -1,0 +1,10 @@
+--money spent annually for each department where salaries >= $300,000
+select department, SUM(salary) as total_spent
+from employees
+having total_spent>=300000;
+
+--departments that pay average of at least $70,000 per year
+SELECT department, AVG(salary) as avg_salary
+FROM employees
+GROUP BY department
+HAVING avg_salary>=70000; 
